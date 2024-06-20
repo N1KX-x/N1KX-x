@@ -1,93 +1,83 @@
-niko@niko:~/PyPlasmaOpt$ python3 -m pytest
-============================= test session starts ==============================
+niko@niko:~/PyPlasmaOpt$ python3 -m pip install -e .
+Obtaining file:///home/niko/PyPlasmaOpt
+Requirement already satisfied: argparse in /home/niko/.local/lib/python3.8/site-packages (from PlasmaOpt==0.0.0) (1.4.0)
+Requirement already satisfied: matplotlib in /home/niko/.local/lib/python3.8/site-packages (from PlasmaOpt==0.0.0) (3.7.5)
+Requirement already satisfied: mpi4py in /home/niko/.local/lib/python3.8/site-packages (from PlasmaOpt==0.0.0) (3.1.6)
+Requirement already satisfied: numpy in /home/niko/.local/lib/python3.8/site-packages (from PlasmaOpt==0.0.0) (1.24.4)
+Requirement already satisfied: property_manager3 in /home/niko/.local/lib/python3.8/site-packages (from PlasmaOpt==0.0.0) (2.3.1)
+Requirement already satisfied: pybind11>=2.4 in /home/niko/.local/lib/python3.8/site-packages (from PlasmaOpt==0.0.0) (2.12.0)
+Requirement already satisfied: randomgen in /home/niko/.local/lib/python3.8/site-packages (from PlasmaOpt==0.0.0) (1.26.1)
+Requirement already satisfied: scipy in /home/niko/.local/lib/python3.8/site-packages (from PlasmaOpt==0.0.0) (1.10.1)
+Requirement already satisfied: sympy in /home/niko/.local/lib/python3.8/site-packages (from PlasmaOpt==0.0.0) (1.12.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/niko/.local/lib/python3.8/site-packages (from matplotlib->PlasmaOpt==0.0.0) (1.4.5)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/lib/python3/dist-packages (from matplotlib->PlasmaOpt==0.0.0) (2.7.3)
+Requirement already satisfied: packaging>=20.0 in /home/niko/.local/lib/python3.8/site-packages (from matplotlib->PlasmaOpt==0.0.0) (24.1)
+Requirement already satisfied: pillow>=6.2.0 in /usr/lib/python3/dist-packages (from matplotlib->PlasmaOpt==0.0.0) (7.0.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /home/niko/.local/lib/python3.8/site-packages (from matplotlib->PlasmaOpt==0.0.0) (3.1.2)
+Requirement already satisfied: importlib-resources>=3.2.0; python_version < "3.10" in /home/niko/.local/lib/python3.8/site-packages (from matplotlib->PlasmaOpt==0.0.0) (6.4.0)
+Requirement already satisfied: fonttools>=4.22.0 in /home/niko/.local/lib/python3.8/site-packages (from matplotlib->PlasmaOpt==0.0.0) (4.53.0)
+Requirement already satisfied: contourpy>=1.0.1 in /home/niko/.local/lib/python3.8/site-packages (from matplotlib->PlasmaOpt==0.0.0) (1.1.1)
+Requirement already satisfied: cycler>=0.10 in /home/niko/.local/lib/python3.8/site-packages (from matplotlib->PlasmaOpt==0.0.0) (0.12.1)
+Requirement already satisfied: verboselogs>=1.1 in /home/niko/.local/lib/python3.8/site-packages (from property_manager3->PlasmaOpt==0.0.0) (1.7)
+Requirement already satisfied: humanfriendly>=4.12 in /home/niko/.local/lib/python3.8/site-packages (from property_manager3->PlasmaOpt==0.0.0) (10.0)
+Requirement already satisfied: mpmath<1.4.0,>=1.1.0 in /home/niko/.local/lib/python3.8/site-packages (from sympy->PlasmaOpt==0.0.0) (1.3.0)
+Requirement already satisfied: zipp>=3.1.0; python_version < "3.10" in /home/niko/.local/lib/python3.8/site-packages (from importlib-resources>=3.2.0; python_version < "3.10"->matplotlib->PlasmaOpt==0.0.0) (3.19.2)
+Installing collected packages: PlasmaOpt
+  Attempting uninstall: PlasmaOpt
+    Found existing installation: PlasmaOpt 0.0.0
+    Uninstalling PlasmaOpt-0.0.0:
+      Successfully uninstalled PlasmaOpt-0.0.0
+  Running setup.py develop for PlasmaOpt
+Successfully installed PlasmaOpt
+niko@niko:~/PyPlasmaOpt$ python3 -m pip install numpy
+Requirement already satisfied: numpy in /home/niko/.local/lib/python3.8/site-packages (1.24.4)
+niko@niko:~/PyPlasmaOpt$ python3 -m pip install pytest
+Requirement already satisfied: pytest in /home/niko/.local/lib/python3.8/site-packages (8.2.2)
+Requirement already satisfied: iniconfig in /home/niko/.local/lib/python3.8/site-packages (from pytest) (2.0.0)
+Requirement already satisfied: pluggy<2.0,>=1.5 in /home/niko/.local/lib/python3.8/site-packages (from pytest) (1.5.0)
+Requirement already satisfied: tomli>=1; python_version < "3.11" in /home/niko/.local/lib/python3.8/site-packages (from pytest) (2.0.1)
+Requirement already satisfied: packaging in /home/niko/.local/lib/python3.8/site-packages (from pytest) (24.1)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8; python_version < "3.11" in /home/niko/.local/lib/python3.8/site-packages (from pytest) (1.2.1)
+niko@niko:~/PyPlasmaOpt$ python3 -m pytest tests/
+=============================== test session starts ===============================
 platform linux -- Python 3.8.10, pytest-8.2.2, pluggy-1.5.0
 rootdir: /home/niko/PyPlasmaOpt
-collecting 0 items                                                             Failed to import pybind11_tests from pytest:
-  ModuleNotFoundError: No module named 'pybind11_tests'
-collected 0 items                                                              
-INTERNALERROR> Traceback (most recent call last):
-INTERNALERROR>   File "/home/niko/PyPlasmaOpt/pybind11/tests/conftest.py", line 237, in _test_import_pybind11
-INTERNALERROR>     import pybind11_tests  # noqa: F401 imported but unused
-INTERNALERROR> ModuleNotFoundError: No module named 'pybind11_tests'
-INTERNALERROR> 
-INTERNALERROR> During handling of the above exception, another exception occurred:
-INTERNALERROR> 
-INTERNALERROR> Traceback (most recent call last):
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 285, in wrap_session
-INTERNALERROR>     session.exitstatus = doit(config, session) or 0
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 338, in _main
-INTERNALERROR>     config.hook.pytest_collection(session=session)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_hooks.py", line 513, in __call__
-INTERNALERROR>     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_manager.py", line 120, in _hookexec
-INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 139, in _multicall
-INTERNALERROR>     raise exception.with_traceback(exception.__traceback__)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 122, in _multicall
-INTERNALERROR>     teardown.throw(exception)  # type: ignore[union-attr]
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/logging.py", line 794, in pytest_collection
-INTERNALERROR>     return (yield)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 122, in _multicall
-INTERNALERROR>     teardown.throw(exception)  # type: ignore[union-attr]
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/warnings.py", line 120, in pytest_collection
-INTERNALERROR>     return (yield)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 122, in _multicall
-INTERNALERROR>     teardown.throw(exception)  # type: ignore[union-attr]
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/config/__init__.py", line 1424, in pytest_collection
-INTERNALERROR>     return (yield)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 103, in _multicall
-INTERNALERROR>     res = hook_impl.function(*args)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 349, in pytest_collection
-INTERNALERROR>     session.perform_collect()
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 811, in perform_collect
-INTERNALERROR>     self.items.extend(self.genitems(node))
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 979, in genitems
-INTERNALERROR>     yield from self.genitems(subnode)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 979, in genitems
-INTERNALERROR>     yield from self.genitems(subnode)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 974, in genitems
-INTERNALERROR>     rep, duplicate = self._collect_one_node(node, handle_dupes)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 837, in _collect_one_node
-INTERNALERROR>     rep = collect_one_node(node)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/runner.py", line 567, in collect_one_node
-INTERNALERROR>     rep: CollectReport = ihook.pytest_make_collect_report(collector=collector)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_hooks.py", line 513, in __call__
-INTERNALERROR>     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_manager.py", line 120, in _hookexec
-INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 139, in _multicall
-INTERNALERROR>     raise exception.with_traceback(exception.__traceback__)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 122, in _multicall
-INTERNALERROR>     teardown.throw(exception)  # type: ignore[union-attr]
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/capture.py", line 867, in pytest_make_collect_report
-INTERNALERROR>     rep = yield
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 103, in _multicall
-INTERNALERROR>     res = hook_impl.function(*args)
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/runner.py", line 391, in pytest_make_collect_report
-INTERNALERROR>     call = CallInfo.from_call(
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/runner.py", line 341, in from_call
-INTERNALERROR>     result: Optional[TResult] = func()
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/runner.py", line 380, in collect
-INTERNALERROR>     collector.config.pluginmanager._loadconftestmodules(
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/config/__init__.py", line 666, in _loadconftestmodules
-INTERNALERROR>     mod = self._importconftest(
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/config/__init__.py", line 717, in _importconftest
-INTERNALERROR>     mod = import_path(
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/pathlib.py", line 591, in import_path
-INTERNALERROR>     importlib.import_module(module_name)
-INTERNALERROR>   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
-INTERNALERROR>     return _bootstrap._gcd_import(name[level:], package, level)
-INTERNALERROR>   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
-INTERNALERROR>   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
-INTERNALERROR>   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
-INTERNALERROR>   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
-INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/assertion/rewrite.py", line 178, in exec_module
-INTERNALERROR>     exec(co, module.__dict__)
-INTERNALERROR>   File "/home/niko/PyPlasmaOpt/pybind11/tests/conftest.py", line 244, in <module>
-INTERNALERROR>     _test_import_pybind11()
-INTERNALERROR>   File "/home/niko/PyPlasmaOpt/pybind11/tests/conftest.py", line 241, in _test_import_pybind11
-INTERNALERROR>     sys.exit(1)
-INTERNALERROR> SystemExit: 1
-mainloop: caught unexpected SystemExit!
+collected 73 items                                                                
 
-============================ no tests ran in 1.02s =============================
+tests/test_biotsavart.py ..........................                         [ 35%]
+tests/test_coil_objectives.py ......                                        [ 43%]
+tests/test_cppbinding.py .                                                  [ 45%]
+tests/test_curve.py ...................                                     [ 71%]
+tests/test_cvar.py ..                                                       [ 73%]
+tests/test_matlabcomparison.py .....                                        [ 80%]
+tests/test_ncsx.py .                                                        [ 82%]
+tests/test_objectives.py ............                                       [ 98%]
+tests/test_poincareplot.py .                                                [100%]
+
+================================ warnings summary =================================
+../.local/lib/python3.8/site-packages/property_manager3/__init__.py:94
+../.local/lib/python3.8/site-packages/property_manager3/__init__.py:94
+  /home/niko/.local/lib/python3.8/site-packages/property_manager3/__init__.py:94: DeprecationWarning: humanfriendly.compact was moved to humanfriendly.text.compact, please update your imports
+    from humanfriendly import coerce_boolean, compact, concatenate, format, pluralize
+
+../.local/lib/python3.8/site-packages/property_manager3/__init__.py:94
+../.local/lib/python3.8/site-packages/property_manager3/__init__.py:94
+  /home/niko/.local/lib/python3.8/site-packages/property_manager3/__init__.py:94: DeprecationWarning: humanfriendly.concatenate was moved to humanfriendly.text.concatenate, please update your imports
+    from humanfriendly import coerce_boolean, compact, concatenate, format, pluralize
+
+../.local/lib/python3.8/site-packages/property_manager3/__init__.py:94
+../.local/lib/python3.8/site-packages/property_manager3/__init__.py:94
+  /home/niko/.local/lib/python3.8/site-packages/property_manager3/__init__.py:94: DeprecationWarning: humanfriendly.format was moved to humanfriendly.text.format, please update your imports
+    from humanfriendly import coerce_boolean, compact, concatenate, format, pluralize
+
+../.local/lib/python3.8/site-packages/property_manager3/__init__.py:94
+../.local/lib/python3.8/site-packages/property_manager3/__init__.py:94
+  /home/niko/.local/lib/python3.8/site-packages/property_manager3/__init__.py:94: DeprecationWarning: humanfriendly.pluralize was moved to humanfriendly.text.pluralize, please update your imports
+    from humanfriendly import coerce_boolean, compact, concatenate, format, pluralize
+
+tests/test_cvar.py::test_cvar_toy_example
+  /home/niko/PyPlasmaOpt/tests/test_cvar.py:60: DeprecationWarning: Use of `minimize` with `x0.ndim != 1` is deprecated. Currently, singleton dimensions will be removed from `x0`, but an error will be raised in SciPy 1.11.0.
+    res = minimize(fun, np.array([t, x]), jac=True, method="BFGS", tol=1e-10)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 73 passed, 9 warnings in 11.63s =========================
