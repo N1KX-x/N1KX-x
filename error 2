@@ -1,0 +1,71 @@
+ERROR collecting tests/test_biotsavart.py ____________________
+/usr/lib/python2.7/dist-packages/_pytest/python.py:507: in _importtestmodule
+    mod = self.fspath.pyimport(ensuresyspath=importmode)
+/usr/lib/python2.7/dist-packages/py/_path/local.py:701: in pyimport
+    __import__(modname)
+E     File "/home/niko/PyPlasmaOpt/tests/test_biotsavart.py", line 71
+E       dB_dh = h @ bs.compute_by_dcoilcoeff(points, use_cpp=use_cpp).dB_by_dcoilcoeffs[0][0,:,:]
+E                 ^
+E   SyntaxError: invalid syntax
+_________________ ERROR collecting tests/test_coil_objectives.py __________________
+ImportError while importing test module '/home/niko/PyPlasmaOpt/tests/test_coil_objectives.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+tests/test_coil_objectives.py:2: in <module>
+    import numpy as np
+E   ImportError: No module named numpy
+____________________ ERROR collecting tests/test_cppbinding.py ____________________
+ImportError while importing test module '/home/niko/PyPlasmaOpt/tests/test_cppbinding.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+tests/test_cppbinding.py:1: in <module>
+    import cppplasmaopt as cpp
+E   ImportError: No module named cppplasmaopt
+______________________ ERROR collecting tests/test_curve.py _______________________
+/usr/lib/python2.7/dist-packages/_pytest/python.py:507: in _importtestmodule
+    mod = self.fspath.pyimport(ensuresyspath=importmode)
+/usr/lib/python2.7/dist-packages/py/_path/local.py:701: in pyimport
+    __import__(modname)
+E     File "/home/niko/PyPlasmaOpt/tests/test_curve.py", line 8
+E       dfx = direction@df(x)
+E                      ^
+E   SyntaxError: invalid syntax
+_______________________ ERROR collecting tests/test_cvar.py _______________________
+ImportError while importing test module '/home/niko/PyPlasmaOpt/tests/test_cvar.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+tests/test_cvar.py:2: in <module>
+    import numpy as np
+E   ImportError: No module named numpy
+_________________ ERROR collecting tests/test_matlabcomparison.py _________________
+ImportError while importing test module '/home/niko/PyPlasmaOpt/tests/test_matlabcomparison.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+tests/test_matlabcomparison.py:2: in <module>
+    import numpy as np
+E   ImportError: No module named numpy
+_______________________ ERROR collecting tests/test_ncsx.py _______________________
+ImportError while importing test module '/home/niko/PyPlasmaOpt/tests/test_ncsx.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+tests/test_ncsx.py:2: in <module>
+    import netCDF4 as nc
+E   ImportError: No module named netCDF4
+____________________ ERROR collecting tests/test_objectives.py ____________________
+/usr/lib/python2.7/dist-packages/_pytest/python.py:507: in _importtestmodule
+    mod = self.fspath.pyimport(ensuresyspath=importmode)
+/usr/lib/python2.7/dist-packages/py/_path/local.py:701: in pyimport
+    __import__(modname)
+E     File "/home/niko/PyPlasmaOpt/tests/test_objectives.py", line 218
+E       deriv = dJ @ h
+E                  ^
+E   SyntaxError: invalid syntax
+___________________ ERROR collecting tests/test_poincareplot.py ___________________
+ImportError while importing test module '/home/niko/PyPlasmaOpt/tests/test_poincareplot.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+tests/test_poincareplot.py:2: in <module>
+    from pyplasmaopt import BiotSavart, get_24_coil_data, CoilCollection, compute_field_lines
+E   ImportError: No module named pyplasmaopt
+!!!!!!!!!!!!!!!!!!!!! Interrupted: 9 errors during collection !!!!!!!!!!!!!!!!!!!!!
+============================= 9 error in 0.14 seconds =====
