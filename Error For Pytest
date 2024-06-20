@@ -1,0 +1,93 @@
+niko@niko:~/PyPlasmaOpt$ python3 -m pytest
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-8.2.2, pluggy-1.5.0
+rootdir: /home/niko/PyPlasmaOpt
+collecting 0 items                                                             Failed to import pybind11_tests from pytest:
+  ModuleNotFoundError: No module named 'pybind11_tests'
+collected 0 items                                                              
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/home/niko/PyPlasmaOpt/pybind11/tests/conftest.py", line 237, in _test_import_pybind11
+INTERNALERROR>     import pybind11_tests  # noqa: F401 imported but unused
+INTERNALERROR> ModuleNotFoundError: No module named 'pybind11_tests'
+INTERNALERROR> 
+INTERNALERROR> During handling of the above exception, another exception occurred:
+INTERNALERROR> 
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 285, in wrap_session
+INTERNALERROR>     session.exitstatus = doit(config, session) or 0
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 338, in _main
+INTERNALERROR>     config.hook.pytest_collection(session=session)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_hooks.py", line 513, in __call__
+INTERNALERROR>     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_manager.py", line 120, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 139, in _multicall
+INTERNALERROR>     raise exception.with_traceback(exception.__traceback__)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 122, in _multicall
+INTERNALERROR>     teardown.throw(exception)  # type: ignore[union-attr]
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/logging.py", line 794, in pytest_collection
+INTERNALERROR>     return (yield)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 122, in _multicall
+INTERNALERROR>     teardown.throw(exception)  # type: ignore[union-attr]
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/warnings.py", line 120, in pytest_collection
+INTERNALERROR>     return (yield)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 122, in _multicall
+INTERNALERROR>     teardown.throw(exception)  # type: ignore[union-attr]
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/config/__init__.py", line 1424, in pytest_collection
+INTERNALERROR>     return (yield)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 103, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 349, in pytest_collection
+INTERNALERROR>     session.perform_collect()
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 811, in perform_collect
+INTERNALERROR>     self.items.extend(self.genitems(node))
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 979, in genitems
+INTERNALERROR>     yield from self.genitems(subnode)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 979, in genitems
+INTERNALERROR>     yield from self.genitems(subnode)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 974, in genitems
+INTERNALERROR>     rep, duplicate = self._collect_one_node(node, handle_dupes)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/main.py", line 837, in _collect_one_node
+INTERNALERROR>     rep = collect_one_node(node)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/runner.py", line 567, in collect_one_node
+INTERNALERROR>     rep: CollectReport = ihook.pytest_make_collect_report(collector=collector)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_hooks.py", line 513, in __call__
+INTERNALERROR>     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_manager.py", line 120, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 139, in _multicall
+INTERNALERROR>     raise exception.with_traceback(exception.__traceback__)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 122, in _multicall
+INTERNALERROR>     teardown.throw(exception)  # type: ignore[union-attr]
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/capture.py", line 867, in pytest_make_collect_report
+INTERNALERROR>     rep = yield
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/pluggy/_callers.py", line 103, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/runner.py", line 391, in pytest_make_collect_report
+INTERNALERROR>     call = CallInfo.from_call(
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/runner.py", line 341, in from_call
+INTERNALERROR>     result: Optional[TResult] = func()
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/runner.py", line 380, in collect
+INTERNALERROR>     collector.config.pluginmanager._loadconftestmodules(
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/config/__init__.py", line 666, in _loadconftestmodules
+INTERNALERROR>     mod = self._importconftest(
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/config/__init__.py", line 717, in _importconftest
+INTERNALERROR>     mod = import_path(
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/pathlib.py", line 591, in import_path
+INTERNALERROR>     importlib.import_module(module_name)
+INTERNALERROR>   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+INTERNALERROR>     return _bootstrap._gcd_import(name[level:], package, level)
+INTERNALERROR>   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+INTERNALERROR>   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+INTERNALERROR>   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+INTERNALERROR>   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+INTERNALERROR>   File "/home/niko/.local/lib/python3.8/site-packages/_pytest/assertion/rewrite.py", line 178, in exec_module
+INTERNALERROR>     exec(co, module.__dict__)
+INTERNALERROR>   File "/home/niko/PyPlasmaOpt/pybind11/tests/conftest.py", line 244, in <module>
+INTERNALERROR>     _test_import_pybind11()
+INTERNALERROR>   File "/home/niko/PyPlasmaOpt/pybind11/tests/conftest.py", line 241, in _test_import_pybind11
+INTERNALERROR>     sys.exit(1)
+INTERNALERROR> SystemExit: 1
+mainloop: caught unexpected SystemExit!
+
+============================ no tests ran in 1.02s =============================
