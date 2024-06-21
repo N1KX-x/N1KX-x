@@ -2,5 +2,5 @@ To let PyPlasmaOpt run successfully, it is best to run on Ubuntu 22.04 system.
 To install a ubuntu 22.04 system, it is best to use virtualk machine such as VmWare Fusion for mac, and VM ware workstation for Windows.
 Download VmWare and Download the ISO for Ubuntu 22.04 for from internet. NOTICE: mac m1/m2 need to download a arm64 server version.
 Once installed ubuntu server, and type in sudo apt install ubuntu-desktop to install ubuntu desktop version for ubuntu desktop version from server version.
-Once completed run
+Once completed run:
 brew install mpich
